@@ -1,0 +1,53 @@
+Examples from Cracking the Coding Interview
+
+
+############# VI.1 - page 66 #############
+
+The following code computes the product of a and b. What is its runtime?
+    int product(int a, int b) {
+        int sum = 0;
+        for (int i= 0; i < b; i++) {
+            sum += a;
+        }
+        return sum;
+    }
+
+sum += a is constant in time
+what matters is only size of (b) so I'd say it's O(b)
+
+
+############# VI.2 - page 66 #############
+
+The following code computes a^b . What is its runtime?
+    int power(int a, int b) {
+        if (b < 0) {
+            return 0; // error
+        } else if (b == 0) {
+            return 1;
+        } else {
+            return a * power(a, b - 1);
+        }
+    }
+
+I'd say its O(a^b-1) but correct answer is just O(b)
+
+############# VI.2 - page 67 #############
+
+The following code computes a % b. What is its runtime?
+    int mod(int a, int b) {
+        if (b <= 0) {
+            return -1;
+        }
+        int div = a / b;
+        return a - div * b;
+    }
+
+    pair (1, 1)
+    return 1 - 1*1
+
+    parir (50, 100)
+    return 50 - 0.5 * 100
+
+    I'd say it's O(1) - constant amount of work
+
+
