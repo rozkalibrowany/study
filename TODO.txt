@@ -1,0 +1,24 @@
+MUST HAVE PRACTICE
+
+1. Data Structures
+ Linked Lists
+ Trees, Tries & graphs
+ Stacks & queues
+ Heaps
+ Vectors/ArrayLists
+ Hash Tables
+
+
+2. Alhorithms
+Breadth-First Search !!!
+Depth-First Search !!!
+Binary Search !!!
+Merge Sort !!!
+Quick Sort !!!
+
+3. Concepts
+Bit Manipulation
+Memory (Stack vs Heap)
+Recursion
+Dynamic Programming
+Big O Time & Space (Little progress already)
