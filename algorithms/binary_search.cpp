@@ -13,33 +13,39 @@ A program that demonstrates binary search in C++ is given below. */
 
 using namespace std;
 
-int getIndex(int val, int arr[], int size) {
-  int mid = arr[size / 2];
+int binarySearch(int val, int arr[], int size) {
+  int mid = size / 2;
 
-  if (first > second) {
-    
+  if (arr[mid] == val) {
+    return mid;
+  } else if (val > arr[mid]) {
+    for (int i = mid; i <= size; ++i) {
+      if (arr[i] == val) {
+        return i;
+      }
+    }
+  } else {
+    for (int i = mid; i >= 0; --i) {
+      if (arr[i] == val) {
+        return i;
+      }
+    }
   }
+  return -1;
 }
 
 int main(void) {
   int arr[] = {0, 4, 5, 7, 14, 15, 19, 22, 45};
   int size = sizeof(arr) / sizeof(arr[0]);
-  int val = -1;
+  int val;
 
-  while (true) {
-    cout << "Searching number:";
-    cin >> val;
-    cout << " " << val << endl;
-    if (val == -1) {
-      cout << "Wrong number! Type another" << endl;
-      continue;
-    }
+  cout << "You have given array: {0, 4, 5, 7, 14, 15, 19, 22, 45}" << endl;
+  cout << "Searching number: ";
+  cin >> val;
+  cout << " " << val << endl;
 
-    int ind = getIndex(val, arr, size);
-    cout << "Found index: " << ind << endl;
-
-    break;
-  }
+  int index = binarySearch(val, arr, size - 1);
+  cout << "Found index: " << index << endl;
 
   return 0;
 }
